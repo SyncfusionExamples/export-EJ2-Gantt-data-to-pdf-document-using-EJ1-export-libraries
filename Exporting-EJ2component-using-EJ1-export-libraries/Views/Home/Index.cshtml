@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.syncfusion.com/js/assets/external/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+</head>
+<body>
+    <div id="GanttContainer" style="height:350px;width:100%;"></div>
+    <form action="http://localhost:54057/Home/PdfExport" method="post">
+        <input type="hidden" name="GanttData" id="GanttData" />
+    </form>
+    <script type="text/javascript">
+        var data = JSON.parse('@Html.Raw(Json.Encode(@ViewBag.DataSource))');
+
+        var ganttChart = new ej.gantt.Gantt({
+            dataSource: data,
+            height: '450px',
+            highlightWeekends: true,
+            allowSelection: true,
+            treeColumnIndex: 1,
+            taskFields: {
+                id: 'taskID',
+                name: 'taskName',
+                startDate: 'startDate',
+                endDate: 'endDate',
+                duration: 'duration',
+                progress: 'progress',
+                dependency: 'predecessor',
+                child: 'subtasks',
+            },           
+            projectStartDate: new Date('02/19/2017'),
+            projectEndDate: new Date('03/18/2017'),
+            toolbar: ['PdfExport'],
+            toolbarClick: toolbarclick
+        });
+        ganttChart.appendTo('#GanttContainer');
+        function toolbarclick(args) {
+            if (args.item.id == "GanttContainer_pdfexport") {
+                var form = document.getElementsByTagName("form")[0];
+                form.submit();
+                args.cancel = true;
+            }
+        }
+    </script>
+</body>
+</html>
+

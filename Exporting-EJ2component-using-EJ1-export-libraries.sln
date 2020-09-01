@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exporting-EJ2component-using-EJ1-export-libraries", "Exporting-EJ2component-using-EJ1-export-libraries\Exporting-EJ2component-using-EJ1-export-libraries.csproj", "{EE7D4380-7B27-4201-B623-78AB1AEFFAAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE7D4380-7B27-4201-B623-78AB1AEFFAAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE7D4380-7B27-4201-B623-78AB1AEFFAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE7D4380-7B27-4201-B623-78AB1AEFFAAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE7D4380-7B27-4201-B623-78AB1AEFFAAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {627D9260-342F-40EF-AE15-A0EC92DAC7F8}
+	EndGlobalSection
+EndGlobal
